@@ -1,11 +1,11 @@
 <?php 
-namespace App\View\Helper;
+namespace Combinator\View\Helper;
 
 use Cake\View\Helper;
 use Cake\View\View;
 use Cake\Core\Configure;
-use App\Lib\JSMin;
-use App\Lib\CssMin;
+use Combinator\Lib\JSMin;
+use Combinator\Lib\CssMin;
 
 class CombinatorHelper extends Helper{
     var $libs = array('js' => array(), 'css' => array());
@@ -88,7 +88,7 @@ class CombinatorHelper extends Helper{
     function scripts($type) {
         switch($type) {
             case 'js':
-                if(Configure::read('Combinator.js')){
+                if(Configure::read('Optimization.minifyJs')){
                     $this->separate_arrays('js');
                     $cachefile_js = $this->generate_filename('js');
                     
@@ -132,7 +132,7 @@ class CombinatorHelper extends Helper{
                 }
             break;
             case 'css':
-                if(Configure::read('Combinator.css')){
+                if(Configure::read('Optimization.minifyCss')){
                     $this->separate_arrays('css');
                     $cachefile_css = $this->generate_filename('css');
                     
