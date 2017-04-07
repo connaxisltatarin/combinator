@@ -1,0 +1,28 @@
+{
+    "name": "combinator/combinator",
+    "description": "CakePHP 3 combinator Plugin",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "cakephp3", "combinator"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "*"
+    },
+    "autoload": {
+	"psr-4": {
+		"Combinator\\": "src"
+	}
+    },
+    "autoload-dev": {
+		"psr-4": {
+			"Combinator\\Test\\": "tests",
+			"Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+			}
+    },
+    "extra": {
+		"installer-name": "Combinator"
+    }
+}
