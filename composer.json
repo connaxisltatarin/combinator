@@ -12,9 +12,12 @@
 		"phpunit/phpunit": "*"
     },
     "autoload": {
-	"psr-4": {
-		"Combinator\\": "src"
-	}
+		"psr-4": {
+			"Combinator\\": "src"
+		},
+		"classmap": [
+			"Lib"
+		]		
     },
     "autoload-dev": {
 		"psr-4": {
