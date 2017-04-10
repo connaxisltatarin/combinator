@@ -16,7 +16,7 @@
 			"Combinator\\": "src"
 		},
 		"classmap": [
-			"Lib"
+			"src/Lib"
 		]		
     },
     "autoload-dev": {
